@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+.sub {
+  margin: 2px 0 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+}
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+/* ── Formulario ────────────────────────────────────── */
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.etiqueta {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+.etiqueta em {
+  color: #dc2626;
+  font-style: normal;
+}
+
+input,
+select,
+textarea {
+  padding: 7px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  color: #0f172a;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+input:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.acciones-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+button {
+  padding: 7px 13px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+}
+button:hover {
+  background: #eef2f7;
+}
+button.primario {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+button.primario:hover {
+  background: #1d4ed8;
+}
+button.ok {
+  color: #15803d;
+  border-color: #86efac;
+}
+button.ok:hover {
+  background: #f0fdf4;
+}
+button.peligro {
+  color: #b91c1c;
+  border-color: #fca5a5;
+}
+button.peligro:hover {
+  background: #fef2f2;
+}
+
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+.vacio {
+  color: #64748b;
+  font-size: 14px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* ── Tabla ────────────────────────────────────────── */
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.tabla th,
+.tabla td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 7px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+.tabla th {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+.tabla tbody tr:hover {
+  background: #f8fafc;
+}
+.tabla td.resumen {
+  max-width: 200px;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.acciones button {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #334155;
+  white-space: nowrap;
+}
+.prio-baja {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+.prio-media {
+  background: #fef9c3;
+  color: #a16207;
+}
+.prio-alta {
+  background: #ffedd5;
+  color: #c2410c;
+}
+.prio-critica {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.estado-pendiente {
+  background: #e2e8f0;
+  color: #334155;
+}
+.estado-en-progreso {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.estado-finalizada {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.fecha {
+  display: block;
+  color: #94a3b8;
+  font-size: 10px;
+  margin-top: 3px;
+}
